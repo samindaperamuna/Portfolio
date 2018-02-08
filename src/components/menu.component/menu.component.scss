@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+$menu-text-color: #000;
+$menu-font: 'Roboto', sans-serif;
+$menu-height: 30px;
+$menu-padding: 20px;
+$title-font-size: 24px;
+$menu-item-font-size: 16px;
+
+
+@mixin fixed-position-content($adjust, $right) {
+	$menu-center: ($menu-height + 2 * $menu-padding) / 2;
+
+	position: fixed;
+	top: $menu-center - $adjust;
+	right: $right;
+}
+
+div.header {
+	padding: $menu-padding;
+	background-color: #fff;
+	height: $menu-height;
+}
+
+.title {
+	font-size: $title-font-size;
+	font-family: $menu-font;
+	font-weight: normal;
+}
+
+ul.menu {
+	@include fixed-position-content(8, 5 * $menu-padding);
+	list-style: none;
+	list-style-type: none;
+}
+
+li.menu-item {
+	padding-left: 10px;
+	float: left;
+	font-family: $menu-font;
+	font-size: $menu-item-font-size;
+	letter-spacing: 1px;
+	font-weight: thin;
+}
+
+a.menu-link {
+	text-decoration: none;
+	color: $menu-text-color;
+}
+
+.sliding-middle-out {
+	display: inline-block;
+	position: relative;
+	padding-bottom: 3px;
+}
+
+.sliding-middle-out:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 1px;
+	width: 0px;
+	background: transparent;
+	transition: width .25s ease;
+}
+
+.sliding-middle-out:hover:after {
+	width: 100%;
+	background: $menu-text-color;
+}
+
+.search {
+	$length: 36px;
+	@include fixed-position-content(0, 2 * $menu-padding);
+
+	float: right;
+	height: $length;
+	width: $length;
+}
+
+.pipe {
+	@include fixed-position-content(0, 4 * $menu-padding);
+
+	font-size: $menu-item-font-size + 10;
+}
