@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import '../../app/app.component.scss';
 
 $menu-text-color: #000;
-$menu-font: 'Roboto', sans-serif;
+$menu-font: #{$app-font};
 $menu-height: 30px;
 $menu-padding: 20px;
 $title-font-size: 24px;

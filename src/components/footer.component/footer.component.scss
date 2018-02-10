@@ -1,0 +1,30 @@
+@import '../../app/app.component.scss';
+
+$footer-font: #{$app-font};
+
+.footer-container {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+.footer-content {
+	display: table;
+	text-align: center;
+	width: 100%;
+	height: 50px;
+	background-color: $app-color-secondary-light;
+}
+
+.footer-bottom {
+	height: 25px;
+}
+
+.footer-text {
+	display: table-cell;
+	vertical-align: middle;
+	color: $app-color-primary-light;
+	font-family: $footer-font;
+	font-size: 14px;
+	font-weight: bold;
+}
