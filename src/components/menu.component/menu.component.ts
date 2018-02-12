@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
 import { MenuService } from '../../services/menu.service';
 
 @Component({
@@ -10,8 +10,13 @@ import { MenuService } from '../../services/menu.service';
 export class MenuComponent {
 	private title = 'Ventura';
 	private menuItems;
+	private menuVisible: boolean = false;
 
 	constructor(private menuService: MenuService) {
 		this.menuItems = menuService.menuItems;
+	}
+
+	toggleHumbergerMenu() {
+		this.menuVisible = !this.menuVisible;
 	}
 }

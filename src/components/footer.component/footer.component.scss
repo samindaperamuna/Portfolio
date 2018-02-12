@@ -23,8 +23,8 @@ $footer-font: #{$app-font};
 .footer-text {
 	display: table-cell;
 	vertical-align: middle;
-	color: $app-color-primary-light;
+	color: $app-color-primary-dark;
 	font-family: $footer-font;
 	font-size: 14px;
-	font-weight: bold;
+	font-weight: regular;
 }

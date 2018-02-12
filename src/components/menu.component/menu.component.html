@@ -1,11 +1,22 @@
-<div class="header">
-	<span class="title">{{title}}</span>
-
-	<div class="menu">
-		<a class="menu-link" href="#"><img class="search" src="../../assets/img/search-icon.png"></a>
+<div class="container">
+	<div class="header">
+		<div class="humberger" (click)="toggleHumbergerMenu()">
+			<div class="line"></div>
+			<div class="line"></div>
+			<div class="line"></div>
+			<div class="line"></div>
+		</div>
+		<span class="title">{{title}}</span>
+	</div>
+	
+	<ul [ngClass]="menuVisible ? 'menu-open' : 'menu-close'" class="menu menu-close">
+		<li class="menu-item sliding-middle-out" *ngFor="let menuItem of menuItems"><a class="menu-link" href="{{menuItem.link}}">{{menuItem.name}}</a></li>
+	</ul>
+	
+	<div class="search-container">
 		<span class="pipe">|</span>
-		<ul class="menu">
-			<li class="menu-item sliding-middle-out" *ngFor="let menuItem of menuItems"><a class="menu-link" href="{{menuItem.link}}">{{menuItem.name}}</a></li>
-		</ul>
+		<a class="menu-link" href="#">
+			<i class="fas fa-search"></i>
+		</a> 
 	</div>
 </div>

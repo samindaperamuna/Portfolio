@@ -1,6 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://use.fontawesome.com/releases/v5.0.6/css/all.css');
+
 
 $app-font: 'Roboto', sans-serif;
 $app-color-primary-dark: #0E1C36;
 $app-color-primary-light: #D7F9FF;
 $app-color-secondary-light: #AFCBFF;
+
+@mixin app-flex-center {
+	display: flex;
+	align-items: center;
+}
+
+@mixin app-flex-start {
+	display: flex;
+	align-items: start;
+}
+
+@mixin app-flex-baseline {
+	display: flex;
+	align-items: baseline;
+}
+
+menu {
+	padding: 0;
+	margin: 0;	
+}
